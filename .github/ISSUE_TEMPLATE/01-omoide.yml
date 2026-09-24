@@ -1,0 +1,74 @@
+name: 祭りの思い出・証言を寄せる
+description: 下関大祭について覚えていること、聞いた話をお聞かせください
+title: "[証言] "
+labels: ["証言"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ありがとうございます。**うろ覚えで構いません。**
+        年代が曖昧でも、断片的でも、あとから他の話とつながって意味を持ちます。
+        埋められる欄だけで大丈夫です。
+
+  - type: textarea
+    id: naiyou
+    attributes:
+      label: 覚えていること・聞いた話
+      description: 思い出す順番のままで構いません。話し言葉のままでも大丈夫です。
+      placeholder: |
+        例）子どもの頃、まだ真っ暗なうちに戸を叩く音で起こされた。
+        父が「もう行くぞ」と言って、眠いまま連れ出された覚えがある。
+    validations:
+      required: true
+
+  - type: input
+    id: jidai
+    attributes:
+      label: いつ頃の話か
+      description: 正確でなくて構いません。
+      placeholder: 例）昭和40年代／子どもの頃／10年くらい前
+
+  - type: dropdown
+    id: tachiba
+    attributes:
+      label: 祭りとの関わり方
+      options:
+        - 担ぎ手として関わった
+        - 囃子・演奏で関わった
+        - 世話役・運営で関わった
+        - 見る側として参加した
+        - 家族・知人から聞いた話
+        - その他
+
+  - type: input
+    id: chounai
+    attributes:
+      label: 町内・地区
+      description: 差し支えなければ。町内ごとの違いを知る手がかりになります。
+      placeholder: 例）下関○○町
+
+  - type: dropdown
+    id: kakujitsusa
+    attributes:
+      label: この話の確かさ
+      description: 「自信がない」を選んでいただいても掲載します。未確認と明記します。
+      options:
+        - 自分が実際に見た・やった
+        - 直接聞いた話
+        - うろ覚え・自信がない
+
+  - type: input
+    id: koushou
+    attributes:
+      label: 掲載時の呼び方
+      description: 空欄なら「下関在住・年代・性別」のような形にします。実名掲載をご希望の場合のみご記入ください。
+      placeholder: 例）下関在住・80代・男性
+
+  - type: checkboxes
+    id: doui
+    attributes:
+      label: 確認
+      options:
+        - label: 掲載前に内容を確認したい（ご希望の場合はチェック）
+        - label: この内容を公開ページに掲載してよい
+          required: true

@@ -1,0 +1,63 @@
+name: 写真・資料を提供する
+description: 古い写真・映像・チラシ・文献の情報をお寄せください
+title: "[資料] "
+labels: ["資料提供"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        資料のご提供ありがとうございます。
+        **この画面にファイルを添付する前に、下の権利の確認欄をお読みください。**
+        許諾が取れない資料でも、内容の説明だけを文章で載せる形が取れます。
+
+  - type: dropdown
+    id: shurui
+    attributes:
+      label: 資料の種類
+      options:
+        - 写真
+        - 映像
+        - ポスター・チラシ
+        - 書籍・郷土誌・村史
+        - 手ぬぐい・法被などの物品
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: setsumei
+    attributes:
+      label: どんな資料か
+      description: 何が写っているか、どこで手に入れたかなど。
+      placeholder: 例）台輪が坂を上がっているところ。祖父の家のアルバムにあった。
+    validations:
+      required: true
+
+  - type: input
+    id: nendai
+    attributes:
+      label: いつ頃のものか
+      placeholder: 例）昭和50年代／不明
+
+  - type: dropdown
+    id: kenri
+    attributes:
+      label: 撮影者・作成者について
+      description: ここが一番大事な確認です。分からない場合は「分からない」で構いません。
+      options:
+        - 自分が撮影・作成した
+        - 家族が撮影・作成した（許諾を取れる）
+        - 家族が撮影・作成した（許諾を取るのが難しい）
+        - 他人が撮影・作成した
+        - 分からない
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: doui
+    attributes:
+      label: 確認
+      options:
+        - label: この資料を公開ページに掲載してよい
+        - label: 掲載の可否は運営者と相談したい
+        - label: 権利の確認が取れるまで掲載しないでほしい

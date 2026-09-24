@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 雑談・確証のない話はこちら
+    url: https://github.com/tomokatou/shimoseki-taisai/discussions
+    about: 「たしかこうだった気がする」という程度の話でも歓迎です
+  - name: GitHubを使わずに情報を伝えたい
+    url: https://github.com/tomokatou/shimoseki-taisai/blob/main/CONTRIBUTING.md
+    about: アカウントがなくても、口頭でお聞かせいただけます

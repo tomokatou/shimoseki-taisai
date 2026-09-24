@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# 非公開情報（提供者の連絡先・住所・個人を特定できる情報）
+# このフォルダの中身は絶対にコミットしない
+private/
+
+# エディタ
+.vscode/
+.idea/
+*.swp

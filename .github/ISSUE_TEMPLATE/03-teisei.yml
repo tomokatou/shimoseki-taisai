@@ -1,0 +1,39 @@
+name: 記載内容の誤りを指摘する
+description: サイトやドキュメントの間違いを見つけたら教えてください
+title: "[訂正] "
+labels: ["訂正"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ありがとうございます。**指摘は大歓迎です。**
+        このアーカイブは間違いを含んだまま公開し、直しながら育てる方針で運営しています。
+
+  - type: input
+    id: basho
+    attributes:
+      label: どこの記述か
+      placeholder: 例）トップページの「祭りの流れ」／docs/known.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: ayamari
+    attributes:
+      label: 誤っている内容
+    validations:
+      required: true
+
+  - type: textarea
+    id: tadashii
+    attributes:
+      label: 正しくはどうなるか
+      description: 「正しくは分からないが、これは違う」だけでも構いません。
+    validations:
+      required: true
+
+  - type: input
+    id: konkyo
+    attributes:
+      label: 根拠（あれば）
+      placeholder: 例）自分が担ぎ手だった／村史に記載がある
