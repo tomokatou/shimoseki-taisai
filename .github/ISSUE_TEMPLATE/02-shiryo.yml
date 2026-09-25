@@ -29,7 +29,7 @@ body:
     attributes:
       label: どんな資料か
       description: 何が写っているか、どこで手に入れたかなど。
-      placeholder: 例）台輪が坂を上がっているところ。祖父の家のアルバムにあった。
+      placeholder: 例）大輪が坂を上がっているところ。祖父の家のアルバムにあった。
     validations:
       required: true
 
