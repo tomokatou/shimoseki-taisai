@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>下関大祭アーカイブ｜新潟県関川村・下関</title>
-<meta name="description" content="新潟県岩船郡関川村・下関地区に伝わる下関大祭。大蔵神社の祭礼として毎年9月中旬に行われ、台輪と山車が町を練り歩きます。文献に残りにくい由来や担い手の記憶を集めている非公式アーカイブです。">
+<meta name="description" content="新潟県岩船郡関川村・下関地区に伝わる下関大祭。大蔵神社の祭礼として毎年9月中旬に行われます。宝暦4年製作と伝わる大輪は、羽越大水害で流され、残った一部から修理されました。由来や担い手の記憶を集めている非公式アーカイブです。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="下関大祭アーカイブ｜新潟県関川村・下関">
 <meta property="og:description" content="まだ暗いうちに、戸を叩く音で目が覚める。新潟県関川村・下関に伝わる祭りの記憶を集めています。">
@@ -13,225 +13,269 @@
 <style>
 :root{
   --bg:#faf7f2; --ink:#1f1c19; --sub:#5c554d; --line:#ded5c8;
-  --accent:#9c2b21; --accent-soft:#f3e7e3; --card:#fffdfa;
+  --accent:#9c2b21; --accent-soft:#f3e7e3; --card:#fffdfa; --navbg:rgba(250,247,242,.94);
   --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
   --sans:"Hiragino Sans","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
 }
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --bg:#16130f; --ink:#ece5da; --sub:#a8a096; --line:#332c24;
-    --accent:#e0705f; --accent-soft:#2a1d1a; --card:#1e1a15;
-  }
-}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#16130f; --ink:#ece5da; --sub:#a8a096; --line:#332c24;
+  --accent:#e0705f; --accent-soft:#2a1d1a; --card:#1e1a15; --navbg:rgba(22,19,15,.94);
+}}
 :root[data-theme="dark"]{
   --bg:#16130f; --ink:#ece5da; --sub:#a8a096; --line:#332c24;
-  --accent:#e0705f; --accent-soft:#2a1d1a; --card:#1e1a15;
+  --accent:#e0705f; --accent-soft:#2a1d1a; --card:#1e1a15; --navbg:rgba(22,19,15,.94);
 }
 *{box-sizing:border-box}
-body{
-  margin:0; background:var(--bg); color:var(--ink);
-  font-family:var(--sans); line-height:1.9;
-  -webkit-text-size-adjust:100%;
-  overflow-x:hidden;
-}
-.wrap{max-width:720px; margin:0 auto; padding:0 16px}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+  line-height:1.9;-webkit-text-size-adjust:100%;overflow-x:hidden}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
 a{color:var(--accent)}
 
-/* ヘッダー */
-header{padding:72px 0 56px; border-bottom:1px solid var(--line)}
-.eyebrow{
-  font-size:.8rem; letter-spacing:.18em; color:var(--sub);
-  margin:0 0 18px;
-}
-h1{
-  font-family:var(--serif); font-weight:600;
-  font-size:clamp(2.4rem,11vw,3.6rem); letter-spacing:.06em;
-  margin:0 0 10px; line-height:1.3;
-}
-.yomi{font-size:.9rem; color:var(--sub); margin:0 0 28px; letter-spacing:.1em}
-.lead{
-  font-family:var(--serif); font-size:clamp(1.05rem,4.2vw,1.3rem);
-  line-height:2.1; margin:0;
-}
-.lead .em{color:var(--accent); font-weight:600}
-.lead{word-break:auto-phrase; overflow-wrap:anywhere}
+/* 目次ナビ */
+nav.toc{position:sticky;top:0;z-index:10;background:var(--navbg);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc ul{list-style:none;margin:0;padding:10px 16px;display:flex;gap:18px;
+  overflow-x:auto;font-size:.82rem;max-width:720px;margin:0 auto;
+  -ms-overflow-style:none;scrollbar-width:none}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc a{color:var(--sub);text-decoration:none;white-space:nowrap}
+nav.toc a:hover{color:var(--accent)}
 
-/* 注記バー */
-.notice{
-  background:var(--accent-soft); border-left:3px solid var(--accent);
-  padding:14px 18px; margin:32px 0 0; font-size:.86rem;
-  color:var(--sub); line-height:1.8;
-}
+header{padding:64px 0 52px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:.8rem;letter-spacing:.18em;color:var(--sub);margin:0 0 18px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,11vw,3.6rem);
+  letter-spacing:.06em;margin:0 0 10px;line-height:1.3}
+.yomi{font-size:.9rem;color:var(--sub);margin:0 0 28px;letter-spacing:.1em}
+.lead{font-family:var(--serif);font-size:clamp(1.05rem,4.2vw,1.3rem);line-height:2.1;margin:0;
+  word-break:auto-phrase}
+.lead .em{color:var(--accent);font-weight:600}
+.notice{background:var(--accent-soft);border-left:3px solid var(--accent);
+  padding:14px 18px;margin:32px 0 0;font-size:.86rem;color:var(--sub);line-height:1.8}
 .notice strong{color:var(--ink)}
 
-/* セクション */
-section{padding:56px 0; border-bottom:1px solid var(--line)}
-h2{
-  font-family:var(--serif); font-size:1.5rem; font-weight:600;
-  letter-spacing:.05em; margin:0 0 6px;
-}
-.sub{font-size:.84rem; color:var(--sub); margin:0 0 28px}
-h3{font-size:1rem; font-weight:600; margin:32px 0 8px; letter-spacing:.03em}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+h2{font-family:var(--serif);font-size:1.55rem;font-weight:600;letter-spacing:.05em;margin:0 0 6px}
+.sub{font-size:.84rem;color:var(--sub);margin:0 0 28px}
+h3{font-size:1.02rem;font-weight:600;margin:34px 0 8px;letter-spacing:.03em}
+p{margin:0 0 16px}
+.muted{color:var(--sub);font-size:.88rem}
+.big{font-family:var(--serif);font-size:clamp(1.15rem,4.6vw,1.45rem);line-height:2;
+  margin:0 0 24px;word-break:auto-phrase}
 
-dl.facts{margin:0; display:grid; grid-template-columns:auto 1fr; gap:0}
-dl.facts dt{
-  font-size:.82rem; color:var(--sub); padding:12px 20px 12px 0;
-  border-bottom:1px solid var(--line); white-space:nowrap;
-}
-dl.facts dd{
-  margin:0; padding:12px 0; border-bottom:1px solid var(--line);
-  font-size:.95rem;
-}
+dl.facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:0}
+dl.facts dt{font-size:.82rem;color:var(--sub);padding:12px 20px 12px 0;
+  border-bottom:1px solid var(--line);white-space:nowrap}
+dl.facts dd{margin:0;padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
 @media(max-width:480px){
   dl.facts{grid-template-columns:1fr}
-  dl.facts dt{border-bottom:none; padding:12px 0 0}
+  dl.facts dt{border-bottom:none;padding:12px 0 0}
   dl.facts dd{padding:2px 0 12px}
 }
 
-p{margin:0 0 16px}
-.muted{color:var(--sub); font-size:.88rem}
+.unverified{display:inline-block;font-size:.7rem;letter-spacing:.08em;
+  border:1px solid var(--accent);color:var(--accent);padding:1px 7px;border-radius:2px;
+  margin-right:8px;vertical-align:.1em}
 
-/* 未確認タグ */
-.unverified{
-  display:inline-block; font-size:.7rem; letter-spacing:.08em;
-  border:1px solid var(--accent); color:var(--accent);
-  padding:1px 7px; border-radius:2px; margin-right:8px;
-  vertical-align:.1em;
-}
+blockquote{margin:20px 0;padding:14px 18px;background:var(--card);
+  border-left:3px solid var(--line);font-family:var(--serif);font-size:.95rem;color:var(--sub)}
+blockquote p{margin:0}
 
-/* 問いのリスト */
-ul.questions{list-style:none; padding:0; margin:0}
-ul.questions li{
-  padding:16px 0 16px 30px; border-bottom:1px solid var(--line);
-  position:relative; font-family:var(--serif); font-size:1.05rem;
-}
-ul.questions li::before{
-  content:"？"; position:absolute; left:0; top:16px;
-  color:var(--accent); font-weight:600;
-}
+ul.questions{list-style:none;padding:0;margin:0}
+ul.questions li{padding:15px 0 15px 30px;border-bottom:1px solid var(--line);
+  position:relative;font-family:var(--serif);font-size:1.02rem}
+ul.questions li::before{content:"？";position:absolute;left:0;top:15px;color:var(--accent);font-weight:600}
 
-/* 入口カード */
-.routes{display:grid; gap:14px; margin:28px 0 0}
-.route{
-  display:block; background:var(--card); border:1px solid var(--line);
-  border-radius:4px; padding:20px; text-decoration:none; color:inherit;
-  transition:border-color .15s, transform .15s;
-}
-.route:hover{border-color:var(--accent); transform:translateY(-1px)}
-.route .rt{font-weight:600; font-size:1rem; margin:0 0 4px; color:var(--accent)}
-.route .rd{font-size:.86rem; color:var(--sub); margin:0; line-height:1.7}
+.cards{display:grid;gap:14px;margin:26px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px}
+.card h4{margin:0 0 8px;font-size:1rem;color:var(--accent)}
+.card p{margin:0;font-size:.9rem;line-height:1.85;color:var(--sub)}
 
-.rules{font-size:.9rem; padding-left:1.2em; margin:16px 0 0}
+.routes{display:grid;gap:14px;margin:26px 0 0}
+.route{display:block;background:var(--card);border:1px solid var(--line);border-radius:4px;
+  padding:20px;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+.route:hover{border-color:var(--accent);transform:translateY(-1px)}
+.route .rt{font-weight:600;font-size:1rem;margin:0 0 4px;color:var(--accent)}
+.route .rd{font-size:.86rem;color:var(--sub);margin:0;line-height:1.7}
+
+.rules{font-size:.9rem;padding-left:1.2em;margin:16px 0 0}
 .rules li{margin-bottom:8px}
-
-/* 出典 */
-.sources{font-size:.84rem; color:var(--sub); padding-left:1.2em; margin:0}
-.sources li{margin-bottom:6px}
-
-footer{padding:44px 0 72px; font-size:.82rem; color:var(--sub)}
+.sources{font-size:.84rem;color:var(--sub);padding-left:1.2em;margin:0}
+.sources li{margin-bottom:7px}
+.log{font-size:.86rem;color:var(--sub)}
+.log dt{font-weight:600;color:var(--ink);margin-top:14px}
+.log dd{margin:4px 0 0}
+footer{padding:44px 0 72px;font-size:.82rem;color:var(--sub)}
 footer p{margin:0 0 8px}
 </style>
 </head>
 <body>
+
+<nav class="toc">
+  <ul>
+    <li><a href="#owa">大輪</a></li>
+    <li><a href="#matsuri">祭りについて</a></li>
+    <li><a href="#jinja">大蔵神社と大蛇伝説</a></li>
+    <li><a href="#unknown">わかっていないこと</a></li>
+    <li><a href="#contribute">情報をお寄せください</a></li>
+    <li><a href="#sources">出典</a></li>
+  </ul>
+</nav>
 
 <header>
   <div class="wrap">
     <p class="eyebrow">新潟県岩船郡関川村・下関</p>
     <h1>下関大祭</h1>
     <p class="yomi">しもせきたいさい ／ 大蔵神社祭礼</p>
-    <p class="lead">まだ暗いうちに、戸を叩く音で目が覚める。<br><span class="em">ヤレカガオギレ</span>——ほら、かあちゃん起きろ。<br>関川村・下関の秋は、その声から始まる。</p>
+    <p class="lead">まだ暗いうちに、戸を叩く音で目が覚める。<br><span class="em">ヤレカガオギレ</span>——ほら、かあちゃん起きろ。<br>関川村・下関の秋は、その声から始まります。</p>
     <div class="notice">
       <strong>これは非公式のアーカイブです。</strong><br>
-      祭りの主催者・氏子組織・関川村役場とは関係のない有志が運営しています。公式の情報は関川村役場・関川村観光協会にお問い合わせください。
+      祭りの主催者・氏子組織・関川村役場とは関係のない有志（Hollyhocks／加藤）が運営しています。公式の情報は関川村役場・関川村観光協会にお問い合わせください。
     </div>
   </div>
 </header>
 
-<section>
+<section id="owa">
   <div class="wrap">
-    <h2>どんな祭りか</h2>
-    <p class="sub">出典を確認できた事実だけを載せています</p>
+    <h2>大輪</h2>
+    <p class="sub">おおわ</p>
+    <p class="big">宝暦4年——1754年。<br>下関の大輪は、そう伝えられています。</p>
+    <p class="big" style="margin-bottom:8px">いま町を回っている大輪が、そのときのものとは限りません。一度、川に流されているからです。</p>
+
+    <h3>流された日</h3>
+    <p>昭和42年（1967年）8月28日、羽越大水害。荒川が氾濫し、関川村にも犠牲になった方がいました。</p>
+    <p>そのとき、大輪は組み立ての途中でした。流されて、一部だけが残り、残ったものに修理が加えられました。</p>
+    <p><strong>いま町を回っている大輪がいつ作られたものなのかは、まだ調べられていません。</strong></p>
+    <p>この村には、大蛇が荒川をせき止めて下関を水没させようとした、という伝説があります。その大蛇を祀る神社の祭りで使われる大輪が、実際の水害で流された。</p>
+    <p class="muted">水害の記憶は、いまも語り継がれています。昭和63年（1988年）に始まった「えちごせきかわ大したもん蛇まつり」では、竹とわらで作られた大蛇が村を練り歩きます。全長82.8メートル。水害が起きた8月28日から取られた長さです。村の54集落が分担して胴体を作り、つなぎ合わせます。<br>
+    → <a href="https://sekikawa-kankou.com/event-old/taishitamonja/" target="_blank" rel="noopener">えちごせきかわ大したもん蛇まつり（関川村観光協会）</a></p>
+
+    <h3>どう作られているか</h3>
+    <p>車輪はイタヤ材。薄く漆を塗って仕上げてあります。</p>
+    <p>組み合わせには釘を使いません。外輪に鉄の輪もはめない——木のままの車輪です。高欄と柱は欅。ほかは杉。</p>
+    <p>前を持ち上げて、地面に落とす。「あおり」と呼ばれる所作です。鉄を巻いていない木の車輪で、それをやります。</p>
+
+    <h3>誰が乗っているか</h3>
+    <p>大輪の上には、仁徳天皇の人形が載ります。民の家から炊事の煙が上がっていないのを見て、三年のあいだ税を免じたという天皇です。</p>
+    <p>人形は、高殿から四方を眺める姿。頭に烏帽子をかぶっています。まさに、その場面です。</p>
+
+    <div class="cards">
+      <div class="card"><h4>持ち上げて、落とす</h4><p>進みながら、前が上がる。それが合図です。後ろに体重をかけて、持ち上げた前を地面に落とす。車輪には鉄の輪をはめていません。木のままの車輪で、それをやります。</p></div>
+      <div class="card"><h4>息を合わせる</h4><p>力まかせに見えますが、揃っていないとできません。大輪を動かすのは大人たち。山車には子供と女性が乗ります。同じ所作を、担い手を変えて二重に持っている祭りです。</p></div>
+      <div class="card"><h4>音が残る</h4><p>鉄を巻いていない木の車輪が、道に落ちる。その音がどう響くのかを書いた記録は、まだ見つかっていません。聞いたことのある方に、教えていただきたいと思っています。</p></div>
+    </div>
+
+    <p class="muted" style="margin-top:26px"><span class="unverified">注記</span>この節は『新潟県の山車：新潟県文化財緊急悉皆調査報告書』（新潟県文化財調査年報 第24／新潟県教育委員会／1987年3月）によります。同報告書は県内各地の山車を調査したもので、その筆頭に「岩船郡関川村下関の大輪」が挙げられています。<strong>1987年の調査時点の記述です。現在の状態とは異なる可能性があります。</strong></p>
+  </div>
+</section>
+
+<section id="matsuri">
+  <div class="wrap">
+    <h2>祭りについて</h2>
+    <p class="sub">毎年9月中旬／大蔵神社の祭礼</p>
+    <p>江戸時代の記録には、村の氏神は三社——大蔵神社・神明之宮・稲荷大明神とあり、その祭礼は「三八両月」、旧暦の3月と8月に行われていました。旧暦8月は、いまのおおよそ9月にあたります。</p>
+    <p class="muted">開催日は年によって前後します。紹介記事の多くは9月14日・15日としていますが、2025年は9月13日・14日と案内されていました。</p>
+
+    <h3>二日間</h3>
+    <p>一日目は神事だけで終わります。二日目、神輿を先頭に、大輪と山車と樽神輿が集落を回ります。神社の境内には出店が並びます。</p>
+    <p>大輪だけでなく、山車にも「あおり」があります。大輪を動かすのは大人たち。山車には子供と女性が乗ります。</p>
+
+    <h3>江戸時代の祭り</h3>
+    <p>江戸時代の記録に、こんな一行があります。</p>
+    <blockquote><p>今ハ大蔵大明神ト申テ、大社杉等抔ノ境内ニテ、祭礼ニハ足揃ノネリ物出ル也。</p></blockquote>
+    <p>「足揃のねり物」——隊列を組んだ練り物が出ていた、という意味です。いまの大輪や山車の、前の姿かもしれません。</p>
+
+    <h3>下関大祭の見どころ</h3>
+    <div class="cards">
+      <div class="card"><h4>大人だけの祭りではない</h4><p>前を持ち上げて落とす「あおり」は、大輪だけのものではありません。山車でも行われ、そちらには子供と女性が乗ります。同じ所作を、担い手を変えて二重に持っている祭りです。</p></div>
+      <div class="card"><h4>四つが連なって進む</h4><p>二日目、神輿を先頭に、大輪・山車・樽神輿が集落を回ります。一日目は神事だけで終わります。大輪の上には、仁徳天皇の人形が載ります。</p></div>
+      <div class="card"><h4>宿場町のなかを進む</h4><p>下関は旧米沢街道の宿場町でした。国の重要文化財である渡邉邸と佐藤邸が、いまも通り沿いに残っています。町並みは2007年に「美しい日本の歴史的風土100選」に選ばれました。祭りは、その道を通ります。</p></div>
+    </div>
+
+    <h3>基本情報</h3>
     <dl class="facts">
-      <dt>名称</dt><dd>下関大祭（しもせきたいさい）</dd>
-      <dt>位置づけ</dt><dd>大蔵神社の祭礼</dd>
+      <dt>名称</dt><dd>下関大祭（しもせきたいさい）／大蔵神社祭礼</dd>
+      <dt>時期</dt><dd>毎年9月中旬</dd>
       <dt>場所</dt><dd>新潟県岩船郡関川村 下関地区</dd>
-      <dt>時期</dt><dd>毎年9月中旬（9月14日・15日と紹介されています）</dd>
+      <dt>神社</dt><dd>大蔵神社（関川村大字下関381）</dd>
       <dt>最寄り</dt><dd>JR米坂線 越後下関駅</dd>
     </dl>
+  </div>
+</section>
 
-    <h3>二日間の流れ</h3>
-    <p>
-      一日目は神事のみ。二日目に、神輿を先頭として台輪・山車・樽神輿が下関集落のなかを練り歩きます。
-    </p>
+<section id="jinja">
+  <div class="wrap">
+    <h2>大蔵神社と、大蛇の伝説</h2>
+    <p class="sub">創建は大同年間（806年）以前とされています</p>
+    <p>祭神は須佐之男命・大己貴命・櫛稲田姫命。出雲系の三神です。神社に伝わる『大蔵神社略縁起』は、こう書き出されています。</p>
+    <blockquote><p>抑々越の後州岩船郡小泉荘関郷の総鎮守、大蔵神社は、大己貴命にし——</p></blockquote>
+
+    <h3>おりのと、蔵の市</h3>
+    <p>蛇喰（じゃばみ）という集落に、忠蔵という炭焼きがいました。昼寝をしていたところを大蛇に襲われ、斧で退治します。持ち帰って味噌漬けにし、十三樽半。妻と娘に「中を見るな」と言い置いて、家を空けました。</p>
+    <p>妻のおりのは、禁を破ります。一口食べたら美味しくて、全部食べてしまった。</p>
+    <p>激しい渇きに襲われて女川の川辺へ行き、水面をのぞくと、そこに映っていたのは角の生えた大蛇でした。</p>
+    <p>数年後、大里峠。盲目の琵琶法師・蔵の市が休んでいると、女が現れて琵琶を所望します。女はおりのと名乗り、こう明かしました。荒川をせき止めて、下関一帯を水の底に沈め、自分の住処にする、と。</p>
+    <p>蔵の市は村に知らせました。大蛇は退治され、下関は沈みませんでした。</p>
+
+    <h3>見ると目が潰れる</h3>
+    <p>大蔵神社には、蔵の市のものとされる琵琶が神宝として伝えられています。「見ると目が潰れる」と言い伝えられ、いまも非公開です。</p>
+    <p>神社には『大蔵神社略縁起』と『大蔵祠詞』という二つの文書が伝わり、これが伝説の原型とされています。略縁起は承応2年（1653年）のもの。370年以上前の記録です。</p>
+
+    <h3>渡邉家と神社</h3>
+    <p>大蔵神社は「渡邉邸ゆかりの神社」と紹介されます。享保17年（1732年）に家督をついだ渡邉家四代・善永が、翌18年（1733年）、大蔵神社の社殿を再建しました。</p>
+    <p>神社の神主は吉田家。渡邉家は吉田家を援けていた、と村史の別冊にあります。</p>
+    <p>渡邉家の初代は村上藩の郡奉行でした。寛文7年（1667年）に下関へ移り、回船業と酒造業を営みます。下関は米沢街道の宿場であり、荒川舟運の川湊でもありました。</p>
+  </div>
+</section>
+
+<section id="unknown">
+  <div class="wrap">
+    <h2>わかっていないこと</h2>
+    <p class="sub">調べたから、絞り込めました</p>
+    <p>県の調査報告書。村史。江戸時代の縁起。調べれば、出てくる記録はありました。それでも分からないことが残っています。</p>
 
     <h3>ヤレカガオギレ</h3>
-    <p>
-      暗いうちから家々の戸を叩いて回ることから、祭りは始まります。「ヤレカガオギレ」は「ほら、かあちゃん起きろ」の意とされています。
-    </p>
-    <p class="muted">
-      <span class="unverified">未確認</span>
-      この習俗がいつから行われているのか、語の正確な由来、誰が叩いて回る役なのかは、公開されている資料では確認できていません。
-    </p>
-
-    <h3>台輪と山車</h3>
-    <p>
-      華やかな山車と台輪が、町のなかを進みます。
-    </p>
-    <p class="muted">
-      <span class="unverified">未確認</span>
-      台輪の基数、町内ごとの受け持ち、山車の題材の決め方、現存する最も古い台輪の製作年は分かっていません。
-    </p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>分かっていないことのほうが、多い</h2>
-    <p class="sub">このページの本題です</p>
-    <p>
-      下関大祭について、いまインターネットで調べられることは、ここまでに書いた数行がほぼすべてです。開催日と「台輪と山車が練り歩く」という紹介はあっても、その先がありません。
-    </p>
+    <p>この言葉だけは、国立国会図書館の全文検索をかけても、一件も出てきませんでした。活字になっていない。つまり、覚えている人の中にしかない言葉です。</p>
     <ul class="questions">
-      <li>いつ始まったのか</li>
-      <li>なぜ「ヤレカガオギレ」と言いながら戸を叩くのか</li>
-      <li>台輪は何基あり、どの町内が受け持ってきたのか</li>
-      <li>戦中・戦後に途切れた時期はあったのか</li>
-      <li>羽越水害のあと、祭りはどうなったのか</li>
+      <li>語の正確な由来は何か</li>
+      <li>いつ頃から行われているのか</li>
+      <li>誰が戸を叩いて回るのか</li>
+      <li>叩かれた家の側は、どう応えるのか</li>
+      <li><strong>いまも行われているのか</strong></li>
     </ul>
-    <p style="margin-top:28px">
-      これらの答えは、担ってきた方々の記憶のなかにはあるはずです。ただ、書き留められていない。書き留められていないものは、いずれ失われます。
-    </p>
-    <p>
-      <a href="https://github.com/tomokatou/shimoseki-taisai/blob/main/docs/unknowns.md">分かっていないことの一覧を見る →</a>
-    </p>
+    <p class="muted" style="margin-top:18px">紹介記事にはこの習わしが書かれていますが、そのもとになった記述がいつのものかが分かりません。いまも続いているのかどうかも、確かめられていません。</p>
+
+    <h3>「大蔵」という名前は、どこから来たのか</h3>
+    <p>この神社の名前の由来について、いま二つの説明が並んでいます。</p>
+    <p>ひとつは、創建は大同年間（806年）以前という伝え。神社の由緒書にもとづくもので、県の調査報告書にも、観光の紹介にも、この年代が書かれています。</p>
+    <p>もうひとつは、関川村観光協会のサイトにある説明です。大蛇から村を救った座頭・蔵の市について、村人は「高潔な心に深く感謝し、その琵琶と共に大蔵様として祀り上げました」とあります。この説明に立つなら、「大蔵」という社名は「蔵の市」から来たことになります。</p>
+    <p>けれど、蔵の市の伝説が文書として残るのは承応2年（1653年）の『大蔵神社略縁起』。806年以前の創建とは、800年以上の開きがあります。</p>
+    <p>さらに『関川村史』には、この一帯が「佐伯郷」と呼ばれ、「さえき」が「せき」に転じたため、下関の大蔵神社が「関郷鎮守 大蔵神社」と呼ばれたという説も載っています。</p>
+    <p>どちらが間違いという話ではなく、村の中に複数の伝わり方があるということだと思います。<strong>地元では、どう聞いておられますか。</strong></p>
+
+    <h3>まだ分からないこと</h3>
+    <ul class="questions">
+      <li>大輪は全部で何基あり、車輪はいくつか</li>
+      <li>どの町内が受け持ってきたのか</li>
+      <li>昭和42年に流されたとき、どの部分が残ったのか</li>
+      <li>「あおり」はいつからあるのか。新発田の台輪との関係は</li>
+      <li>稚児舞はいまもあるか。誰が舞うのか</li>
+      <li>戦中・戦後に中断した時期はあるか</li>
+    </ul>
+    <p style="margin-top:24px"><a href="docs/unknowns.md">問いの一覧をすべて見る →</a></p>
   </div>
 </section>
 
-<section>
+<section id="contribute">
   <div class="wrap">
     <h2>教えていただけませんか</h2>
     <p class="sub">断片で構いません</p>
-    <p>
-      「子どもの頃こうだった」「うちの町内ではこう呼んでいた」という一言が、あとから他の話とつながって意味を持ちます。
-      <strong>年代が曖昧でも、うろ覚えでも大丈夫です。</strong>
-      確証のない話は「未確認」と明記したうえで残します。
-    </p>
-
+    <p>「子どもの頃こうだった」「うちの町内ではこう呼んでいた」という一言が、あとから他の話とつながって意味を持ちます。<strong>年代が曖昧でも、うろ覚えでも大丈夫です。</strong>確証のない話は「未確認」と明記したうえで残します。</p>
     <div class="routes">
-      <a class="route" href="https://github.com/tomokatou/shimoseki-taisai/issues/new/choose">
-        <p class="rt">思い出・証言を書く</p>
-        <p class="rd">項目を選んで埋めるだけの形式です。文章を書く必要はありません</p>
-      </a>
-      <a class="route" href="https://github.com/tomokatou/shimoseki-taisai/discussions">
-        <p class="rt">雑談として話す</p>
-        <p class="rd">「たしかこうだった気がする」という程度の話でも歓迎です</p>
-      </a>
-      <a class="route" href="https://github.com/tomokatou/shimoseki-taisai/blob/main/CONTRIBUTING.md">
-        <p class="rt">直接伝える</p>
-        <p class="rd">アカウントは不要です。ご家族や知り合いを通じて、口頭でお聞かせいただく形で構いません</p>
-      </a>
+      <a class="route" href="https://github.com/tomokatou/shimoseki-taisai/issues/new/choose"><p class="rt">思い出・証言を書く</p><p class="rd">項目を選んで埋めるだけの形式です。文章を書く必要はありません</p></a>
+      <a class="route" href="https://github.com/tomokatou/shimoseki-taisai/discussions"><p class="rt">雑談として話す</p><p class="rd">「たしかこうだった気がする」という程度の話でも歓迎です</p></a>
+      <a class="route" href="https://github.com/tomokatou/shimoseki-taisai/blob/main/CONTRIBUTING.md"><p class="rt">直接伝える</p><p class="rd">アカウントは不要です。ご家族や知り合いを通じて、口頭でお聞かせいただく形で構いません</p></a>
     </div>
-
     <h3>掲載のルール</h3>
     <ul class="rules">
       <li>掲載前に、語ってくださった方に内容を確認していただきます</li>
@@ -242,21 +286,47 @@ footer p{margin:0 0 8px}
   </div>
 </section>
 
-<section>
+<section id="sources">
   <div class="wrap">
     <h2>出典</h2>
-    <p class="sub">2026年9月24日確認</p>
+    <p class="sub">2026年9月25日確認</p>
+    <h3>文献</h3>
     <ul class="sources">
-      <li><a href="https://www.jalan.net/event/evt_344093/">【下関大祭】アクセス・イベント情報 — じゃらんnet</a></li>
-      <li><a href="https://www.kouryu.or.jp/festival/detail/15581/5595/">祭・イベント詳細：大蔵神社祭礼 — まちむら交流きこう</a></li>
-      <li><a href="http://www.vill.sekikawa.niigata.jp/about/">関川村について — 新潟県関川村役場</a></li>
-      <li><a href="https://www.kanzansou.net/maturi/">関川村2大まつり — 高橋屋観山荘</a></li>
+      <li>『新潟県の山車：新潟県文化財緊急悉皆調査報告書』（新潟県文化財調査年報 第24）新潟県教育委員会、1987年3月</li>
+      <li>『関川村史 通史編』関川村村史編さん委員会 編、関川村、1992年2月</li>
+      <li>『北越の豪農 渡辺家の歴史』（『関川村史』別冊）小村弌 著、関川村、1992年2月</li>
+      <li>『越後せきかわ大蛇伝説』本編・資料編　阿部八郎 著、関川村役場、1995年3月</li>
+      <li>『越後荒川をめぐる民俗誌：鮭・水神・丸木舟』赤羽正春 編</li>
+      <li>『図解にいがた歴史散歩 村上・岩船』新潟日報事業社出版部、1983年9月</li>
     </ul>
+    <h3>ウェブ</h3>
+    <ul class="sources">
+      <li><a href="http://www.vill.sekikawa.niigata.jp/tourism/209/211/index.html">大里峠（おおりとうげ）｜関川村役場</a></li>
+      <li><a href="https://sekikawa-kankou.com/historicallegend/">関川村の大蛇伝説｜関川村観光協会</a></li>
+      <li><a href="https://niigata-kankou.or.jp/spot/7227">大蔵神社｜にいがた観光ナビ</a></li>
+      <li><a href="https://www.kouryu.or.jp/festival/detail/15581/5595/">大蔵神社祭礼｜まちむら交流きこう</a></li>
+      <li><a href="https://www.jalan.net/event/evt_344093/">下関大祭｜じゃらんnet</a></li>
+      <li><a href="https://matsuri-no-hi.com/matsuri/24614">大蔵神社 祭礼｜祭の日</a></li>
+    </ul>
+    <p class="muted" style="margin-top:20px">文献の多くは国立国会図書館デジタルコレクションの「図書館・個人送信」で閲覧できます。詳しくは <a href="docs/sources.md">読むべき資料の一覧</a> をご覧ください。</p>
+
+    <h3>更新の記録</h3>
+    <dl class="log">
+      <dt>2026年9月25日　訂正と大幅加筆</dt>
+      <dd>・「祭りがいつ始まったのか分かっていません」としていましたが、大輪の製作年代が宝暦4年と伝わることが分かったため、記述を改めました<br>
+      ・「なぜ仁徳天皇なのかはどこにも書かれていません」としていましたが、理由が記録されていました。訂正します<br>
+      ・「台輪」と書いていた箇所を「大輪」に統一しました<br>
+      ・大輪・大蛇伝説・渡邉家の節を新設しました</dd>
+      <dt>2026年9月24日　公開</dt>
+      <dd>初版</dd>
+    </dl>
+    <p class="muted">このページの変更の履歴は、<a href="https://github.com/tomokatou/shimoseki-taisai/commits/main">記録の保管庫（GitHub）</a>にすべて残しています。</p>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
+    <p>最終更新：2026年9月25日</p>
     <p>運営：Hollyhocks（加藤）｜非公式アーカイブ</p>
     <p>本サイトは山口県下関市の祭りではなく、新潟県関川村の「しもせき」の祭りを扱っています。</p>
     <p><a href="https://github.com/tomokatou/shimoseki-taisai">GitHubリポジトリ</a></p>
