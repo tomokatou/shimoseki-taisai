@@ -44,7 +44,7 @@ body:
     id: chounai
     attributes:
       label: 町内・地区
-      description: 差し支えなければ。町内ごとの違いを知る手がかりになります。
+      description: 差し支えなければ。町内ごとの違いを知る手がかりになります。※この欄は公開しません（調査のためだけに使います）。
       placeholder: 例）下関○○町
 
   - type: dropdown
